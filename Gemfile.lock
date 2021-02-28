@@ -1,7 +1,52 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://packages.shopify.io/shopify/gems/
   specs:
+    activesupport (6.1.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    avro (1.10.1)
+      multi_json (~> 1)
+    colorize (0.8.1)
+    concurrent-ruby (1.1.8)
     diff-lcs (1.4.4)
+    digest-crc (0.6.3)
+      rake (>= 12.0.0, < 14.0.0)
+    dnsruby (1.61.5)
+      simpleidn (~> 0.1)
+    faraday (1.3.0)
+      faraday-net_http (~> 1.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords
+    faraday-net_http (1.0.1)
+    i18n (1.8.9)
+      concurrent-ruby (~> 1.0)
+    json (2.5.1)
+    kafka-client-ruby (2.5.5)
+      dnsruby (~> 1.61, >= 1.61.3)
+      ruby-kafka (~> 1.2.0)
+      snappy (~> 0.0.17)
+    kafka-shopify (1.9.1)
+      activesupport (>= 5.1)
+      kafka-client-ruby (~> 2.5.5)
+      ruby-kafka (~> 1.2)
+      statsd-instrument (>= 2.3, < 4)
+      sysvmq (~> 0.2.1)
+      tros (~> 1.7)
+    minitest (5.14.4)
+    monorail (0.1.96.20210226220257)
+      avro (~> 1.8)
+      colorize (>= 0.8.1)
+      faraday (>= 0.12, < 2)
+      json (>= 1.8.6)
+      kafka-shopify (~> 1.6)
+      statsd-instrument (>= 2.3.2)
+    multi_json (1.15.0)
+    multipart-post (2.1.1)
+    rake (13.0.3)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -15,11 +60,27 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
+    ruby-kafka (1.2.0)
+      digest-crc
+    ruby2_keywords (0.0.4)
+    simpleidn (0.2.1)
+      unf (~> 0.1.4)
+    snappy (0.0.17)
+    statsd-instrument (3.0.2)
+    sysvmq (0.2.2)
+    tros (1.7.6.4)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.7)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  monorail!
   rspec (~> 3.10)
 
 BUNDLED WITH
